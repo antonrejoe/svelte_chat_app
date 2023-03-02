@@ -1,28 +1,32 @@
+// @ts-nocheck
+import * as firebase from 'firebase/app';
 
-import { firebase } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
 import "firebase/auth"
 import "firebase/firestore"
 
-
 const firebaseConfig = {
 
-    apiKey: "AIzaSyCpgE568oShsjcpVeK7-iJovu7-0k14wRw",
+    apiKey: "AIzaSyBg4q5V2K7X2qwnYCzBprci_34QvrrpbvE",
 
-    authDomain: "svelte-chat-app-af49a.firebaseapp.com",
+    authDomain: "svelte-app-real.firebaseapp.com",
 
-    projectId: "svelte-chat-app-af49a",
+    projectId: "svelte-app-real",
 
-    storageBucket: "svelte-chat-app-af49a.appspot.com",
+    storageBucket: "svelte-app-real.appspot.com",
 
-    messagingSenderId: "1056741567538",
+    messagingSenderId: "952525683530",
 
-    appId: "1:1056741567538:web:f1006302782afdd17e202b",
+    appId: "1:952525683530:web:0f841aada575ba57f19fb3",
 
-    measurementId: "G-77Z7FWQR5H"
+    measurementId: "G-1YQG81KVPF"
+
 
 };
 
-firebase.intializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 export const auth = firebase.auth();
 export const googleProvider = new firebase.auth.GoogleAuthProvider();
